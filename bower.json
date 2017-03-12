@@ -1,0 +1,22 @@
+{
+  "name": "logicode-angular-theme",
+  "description": "wordpress thene that uses angular and wordpress rest api",
+  "main": "index.js",
+  "authors": [
+    "John Jenkins"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.3",
+    "angular-material": "^1.1.3"
+  }
+}
