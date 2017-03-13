@@ -9,27 +9,32 @@ wpApp.factory( 'Posts', function( $resource ) {
     })
 });
 
-wpApp.controller( 'ListCtrl', ['$scope', 'Posts', function( $scope, Posts ) {
-    console.log('ListCtrl');
-    $scope.page_title = 'Blog Listing';
-
-    Posts.query().$promise.then(function (resolve) {
-        $scope.posts = resolve;
-    }, function (reject) {
-        console.log(reject);
-
-    })
-
-}]);
 
     wpApp.config( function( $stateProvider, $urlRouterProvider){
         $urlRouterProvider.otherwise('/');
         $stateProvider
             .state( 'list', {
                 url: '/',
-                controller: 'ListCtrl',
+                controller: 'ListsCtrl',
                 templateUrl: appInfo.template_directory + 'templates/list.html'
             })
-    })
+            .state('details', {
+                url:'/posts/:id',
+                controller:'DetailsCtrl',
+                templateUrl: appInfo.template_directory + 'templates/details.html'
+            })
+
+    });
+
+    /**
+     * @to_trusted is the filer method to render the
+     * content properly
+     * this function returns the html as trusted html
+     */
+    wpApp.filter('to_trusted',['$sce', function ($sce) {
+        return function (text) {
+            return $sce.trustAsHtml(text);
+        }
+    }])
 
 }());

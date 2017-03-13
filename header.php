@@ -9,9 +9,6 @@
   	<link rel="shortcut icon" href="/favicon.ico">
   	<link rel="apple-touch-icon" href="/favicon.png">
    	<?php wp_head();?>
-    <!--[if lt IE 9]>
-	    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />	
 </head>
 <body <?php body_class(); ?>>
@@ -25,7 +22,7 @@
 				</h1>
 			</div>
 			<div class="col-sm-4 col-sm-offset-1">
-				<span>by: <a href="http://www.roysivan.com">Roy Sivan</a></span>
+				<span>by: <a href="http://www.logi-code.com">John Jenkins</a></span>
 			</div>
 		</div>
 </header>
