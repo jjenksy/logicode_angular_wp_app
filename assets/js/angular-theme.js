@@ -1,7 +1,13 @@
 (function () {
 var wpApp = new angular.module( 'wpAngularTheme',
     ['ui.router',
-        'ngResource'] );
+        'ngResource'
+    ] );
+    //todo fix these injectables try downloading the newest bower instead of using cdn
+    // 'ngAnimate',
+    // 'ngAria',
+    //     'ngMaterial'
+
 
 wpApp.factory( 'Posts', function( $resource ) {
     return $resource( appInfo.api_url + 'posts/:ID', {
