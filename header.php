@@ -12,19 +12,16 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />	
 </head>
 <body <?php body_class(); ?>>
-<header class="container header">
-		<div class="row">
-			<div class="col-sm-7">
-				<h1>
-					<a href="<?php bloginfo('wpurl'); ?>">
+<md-toolbar md-scroll-shrink ng-if="true">
+    <div class="md-toolbar-tools">
+        <h3>
+            <span><a href="<?php bloginfo('wpurl'); ?>">
 						<?php echo bloginfo('name'); ?>
 					</a>
-				</h1>
-			</div>
-			<div class="col-sm-4 col-sm-offset-1">
-				<span>by: <a href="http://www.logi-code.com">John Jenkins</a></span>
-			</div>
-		</div>
-</header>
-<div class="container-fluid content-wrapper">
-	<div class="container">
+            </span>
+        </h3>
+    </div>
+</md-toolbar>
+
+<md-content layout="column" class="content-wrapper md-padding" flex layout-column layout-fill>
+<!--    <div ng-if="$root.globals.currentUser" ng-include="'app/nav/nav.header.html'" ng-controller="NavMenuCtrl as ctrl"></div>-->

@@ -1,6 +1,6 @@
-		</div><!-- END CONTAINER -->  
-		</div><!-- END FLUID CONTAINER -->	
-		
+
+</md-content>
+
 		<footer class="container-fluid">
 			<div class="container">
 				<div class="row">

@@ -10,11 +10,11 @@ class wp_ng_theme {
 		wp_enqueue_script( 'angular-resource', get_template_directory_uri() . '/bower_components/angular-resource/angular-resource.min.js', array('angular-core'), '1.0', false );
 		wp_enqueue_script( 'ui-router', get_template_directory_uri() . '/bower_components/angular-ui-router/release/angular-ui-router.min.js', array( 'angular-core' ), '1.0', false );
 		//todo download and install the directories for bower hookup
-		wp_enqueue_script( 'angular-animate', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js', array( 'angular-core' ), '1.0', false );
-		wp_enqueue_script( 'angular-aria', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js', array( 'angular-core' ), '1.0', false );
+		wp_enqueue_script( 'angular-animate', get_template_directory_uri() . '/bower_components/angular-animate/angular-animate.min.js', array( 'angular-core' ), '1.0', false );
+		wp_enqueue_script( 'angular-aria',  get_template_directory_uri() . '/bower_components/angular-aria/angular-aria.min.js', array( 'angular-core' ), '1.0', false );
 
     // AngularJS Material Javascript now available via Google CDN; version 1.0.7 used here
-		wp_enqueue_script( 'angular-material','https://ajax.googleapis.com/ajax/libs/angular_material/1.0.7/angular-material.min.js', array( 'angular-core' ), '1.0', false );
+		wp_enqueue_script( 'angular-material',get_template_directory_uri() . '/bower_components/angular-material/angular-material.min.js', array( 'angular-core' ), '1.0', false );
 		wp_enqueue_script( 'ngScripts', get_template_directory_uri() . '/assets/js/angular-theme.js', array( 'ui-router' ), '1.0', false );
 		wp_enqueue_script( 'detailsCtrl', get_template_directory_uri() . '/assets/js/controller/DetailCtrl.js', array('ngScripts'), '1.0', false );
 		wp_enqueue_script( 'listCtrl', get_template_directory_uri() . '/assets/js/controller/ListsCtrl.js', array('ngScripts'), '1.0', false );

@@ -1,7 +1,10 @@
 (function () {
 var wpApp = new angular.module( 'wpAngularTheme',
     ['ui.router',
-        'ngResource'
+        'ngResource',
+        'ngAnimate',
+        'ngAria',
+        'ngMaterial'
     ] );
     //todo fix these injectables try downloading the newest bower instead of using cdn
     // 'ngAnimate',
@@ -16,7 +19,8 @@ wpApp.factory( 'Posts', function( $resource ) {
 });
 
 
-    wpApp.config( function( $stateProvider, $urlRouterProvider){
+
+    wpApp.config( function( $stateProvider, $urlRouterProvider, $mdThemingProvider){
         $urlRouterProvider.otherwise('/');
         $stateProvider
             .state( 'list', {
@@ -29,6 +33,15 @@ wpApp.factory( 'Posts', function( $resource ) {
                 controller:'DetailsCtrl',
                 templateUrl: appInfo.template_directory + 'templates/details.html'
             })
+
+
+        /**
+         * Config the theme here
+         */
+       $mdThemingProvider.theme('default')
+           .primaryPalette('deep-purple')
+           .accentPalette('purple')
+           .dark();
 
     });
 
