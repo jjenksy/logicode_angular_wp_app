@@ -1,5 +1,22 @@
 
+<p>
+    Developers can also disable the backdrop of the sidenav.<br/>
+    This will disable the functionality to click outside to close the sidenav.
+</p>
 
+<div>
+    <md-button ng-click="toggleLeft()" class="md-raised">
+        Toggle Sidenav
+    </md-button>
+</div>
+
+</div>
+
+</md-content>
+
+</section>
+
+</div>
 
 		<footer class="container-fluid">
 			<div class="container">

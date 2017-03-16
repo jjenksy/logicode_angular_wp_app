@@ -11,8 +11,8 @@
    	<?php wp_head();?>
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />	
 </head>
-<body <?php body_class(); ?>>
-<md-toolbar md-scroll-shrink ng-if="true">
+<body <?php body_class(); ?> layout="column">
+<md-toolbar md-scroll-shrink>
     <div class="md-toolbar-tools">
         <h3>
             <span><a href="<?php bloginfo('wpurl'); ?>">
@@ -22,6 +22,30 @@
         </h3>
     </div>
 </md-toolbar>
+<md-content>
+    <div  layout="column" ng-cloak>
 
-<md-content layout="column" class="content-wrapper md-padding" flex layout-column layout-fill>
-<!--    <div ng-if="$root.globals.currentUser" ng-include="'app/nav/nav.header.html'" ng-controller="NavMenuCtrl as ctrl"></div>-->
+        <section layout="row" flex>
+
+            <md-sidenav class="md-sidenav-left" md-component-id="left"
+                        md-disable-backdrop md-whiteframe="4"
+                        md-is-locked-open="$mdMedia('gt-md')">
+
+                <md-toolbar class="md-theme-indigo">
+                    <h1 class="md-toolbar-tools">Disabled Backdrop</h1>
+                </md-toolbar>
+
+                <md-content layout-margin>
+                    <p>
+                        This sidenav is not showing any backdrop, where users can click on it, to close the sidenav.
+                    </p>
+                    <md-button ng-click="toggleLeft()" class="md-accent">
+                        Close this Sidenav
+                    </md-button>
+                </md-content>
+
+            </md-sidenav>
+
+            <md-content flex layout-padding>
+
+                <div layout="column" layout-align="top center">
