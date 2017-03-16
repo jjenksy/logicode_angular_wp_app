@@ -33,5 +33,9 @@ header, article, footer, section, nav{
 	clear:both;	
 }
 
-
+.headShot{
+	border: 5px solid;
+	border-radius: 75px;
+	max-width: 150px;
+}
 /******** ALL FURTHER STYLING SHOULD BE DONE IN THE more-style.less/css FILES *******/

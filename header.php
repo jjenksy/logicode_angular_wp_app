@@ -8,34 +8,35 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   	<link rel="shortcut icon" href="/favicon.ico">
   	<link rel="apple-touch-icon" href="/favicon.png">
+<!--   wp_head function is used to inject the scripts that were specified in the foote-->
    	<?php wp_head();?>
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />	
 </head>
-<body <?php body_class(); ?> layout="column">
-<md-toolbar md-scroll-shrink>
-    <div class="md-toolbar-tools">
-        <h3>
-            <span><a href="<?php bloginfo('wpurl'); ?>">
-						<?php echo bloginfo('name'); ?>
-					</a>
-            </span>
-        </h3>
-    </div>
-</md-toolbar>
-<md-content>
-    <div  layout="column" ng-cloak>
-
-        <section layout="row" flex>
-
+<body <?php body_class(); ?>>
+<!--<md-toolbar md-scroll-shrink>-->
+<!--    <div class="md-toolbar-tools">-->
+<!--        <h3>-->
+<!--            <span><a href="--><?php //bloginfo('wpurl'); ?><!--">-->
+<!--						--><?php //echo bloginfo('name'); ?>
+<!--					</a>-->
+<!--            </span>-->
+<!--        </h3>-->
+<!--    </div>-->
+<!--</md-toolbar>-->
+<div layout="row" layout-fill ng-cloak="">
             <md-sidenav class="md-sidenav-left" md-component-id="left"
                         md-disable-backdrop md-whiteframe="4"
                         md-is-locked-open="$mdMedia('gt-md')">
 
                 <md-toolbar class="md-theme-indigo">
-                    <h1 class="md-toolbar-tools">Disabled Backdrop</h1>
+                    <h1 class="md-toolbar-tools"><span><a href="<?php bloginfo('wpurl'); ?>">
+						<?php echo bloginfo('name'); ?>
+					</a>
+            </span></h1>
                 </md-toolbar>
 
-                <md-content layout-margin>
+                <md-content layout-margin layout="column" layout-align="start center">
+                    <img  class="headShot" src="https://media.licdn.com/media/AAEAAQAAAAAAAA1KAAAAJDBhYWEyNmI2LTViYWItNGU3ZS1hNzZlLTY5YjhmNTAyMzAxZA.jpg">
                     <p>
                         This sidenav is not showing any backdrop, where users can click on it, to close the sidenav.
                     </p>
@@ -49,3 +50,7 @@
             <md-content flex layout-padding>
 
                 <div layout="column" layout-align="top center">
+
+
+
+

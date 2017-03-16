@@ -40,8 +40,7 @@ wpApp.factory( 'Posts', function( $resource ) {
          */
        $mdThemingProvider.theme('default')
            .primaryPalette('deep-purple')
-           .accentPalette('purple')
-           .dark();
+           .accentPalette('purple');
 
     });
 

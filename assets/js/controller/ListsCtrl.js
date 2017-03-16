@@ -10,14 +10,15 @@
         .module('wpAngularTheme')
         .controller( 'ListsCtrl',ListsCtrl);
 
-    ListsCtrl.$inject = ['$scope', 'Posts' , '$stateParams'];
+    ListsCtrl.$inject = ['$scope', 'Posts' , '$stateParams', '$log'];
 
-    function ListsCtrl( $scope, Posts, $stateParams) {
+    function ListsCtrl( $scope, Posts, $stateParams, $log) {
 
             $scope.page_title = 'Blog Listing';
 
             Posts.query().$promise.then(function (resolve) {
                 $scope.posts = resolve;
+                $log.info(resolve);
             }, function (reject) {
                 console.log(reject);
 
