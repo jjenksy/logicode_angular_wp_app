@@ -1,5 +1,5 @@
 
-</md-content>
+
 
 		<footer class="container-fluid">
 			<div class="container">
@@ -11,7 +11,8 @@
 					</div>
 				</div>
 			</div>
-		</footer>  
+		</footer>
+        </md-content>
     <!-- WP FOOTER -->
   	<?php wp_footer(); ?>
 	    
