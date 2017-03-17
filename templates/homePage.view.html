@@ -1,9 +1,9 @@
 
     <!--About-->
     <md-content class="md-padding" layout-xs="column" layout="row">
-        <div layout="row" id="About">
+        <div layout="row" id="About" scroll-trigger="scrollEventCallback('About')" threshold="50>
             <md-card layout-align="start center" layout="row" layout-md="column" layout-xs="column">
-                <img flex="50" src="https://media.licdn.com/media/AAEAAQAAAAAAAA1KAAAAJDBhYWEyNmI2LTViYWItNGU3ZS1hNzZlLTY5YjhmNTAyMzAxZA.jpg">
+                <img class="homePageSelfie md-padding" flex="50" src="https://media.licdn.com/media/AAEAAQAAAAAAAA1KAAAAJDBhYWEyNmI2LTViYWItNGU3ZS1hNzZlLTY5YjhmNTAyMzAxZA.jpg">
                 <div layout="column">
                     <md-card-title>
                         <md-card-title-text>
@@ -13,26 +13,28 @@
                     <md-card-content>
                         <p>
                         I am a Java, Javascript, and HTML5 Full-Stack developer;
-                        a self taught programmer and C.S. Major.
-                        I consider myself lucky being able to do what
-                        I love as a hobby every day for work. I am a huge
-                        fan of indie game development and spend my free time as a
-                        game maker and pixel artist. I am a passionate coder who
-                        loves to learn new things.
+                        </p>
+                        <p>
+                            a self taught programmer and C.S. Major.
+                            I consider myself lucky being able to do what
+                            I love as a hobby every day for work.
+                        </p>
+                        <p>
+                            I am a huge
+                            fan of indie game development and spend my free time as a
+                            game maker and pixel artist. I am a passionate coder who
+                            loves to learn new things.
                         </p>
 
                     </md-card-content>
-                    <md-card-actions layout="row" layout-align="end center">
-                        <md-button>Action 1</md-button>
-                        <md-button>Action 2</md-button>
-                    </md-card-actions>
                     </div>
                 </div>
             </md-card>
     </md-content>
     <!--About End-->
     <!--Work Skills-->
-    <div class="work-skills" id="Skills">
+    <div class="work-skills" id="Skills" scroll-trigger="scrollEventCallback('Skills')" threshold="50>
+
         <h3>Work Skills</h3>
         <div class="card-panel">
             <div class="row">
@@ -101,7 +103,7 @@
     </div>
     <!--Work Skill End-->
     <!--Work Expereince-->
-    <div class="work-expreince" id="Experience">
+    <div class="work-expreince" id="Experience" scroll-trigger="scrollEventCallback('Experience')" threshold="50>
         <h3>Work Expreince</h3>
         <div class="card-panel hoverable work-ex">
             <h4>Web Programming &amp; Design</h4>
@@ -118,72 +120,10 @@
             <h5 class="text-color">12 jun 2017</h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt leo ut mi accumsan tristique. Duis pulvinar rhoncus rutrum. Morbi mollis bibendum est, quis posuere ligula venenatis interdum. Fusce imperdiet non tortor vel aliquam. Nunc ornare, lorem et porttitor luctus, dui mauris sagittis libero.</p>
         </div>
-        <!--Testimonials-->
-        <div class="testimonial">
-            <h3>Testimonials</h3>
-            <div class="swiper-container testimonials-container swiper-container-horizontal">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide waves-effect swiper-slide-active" style="width: 540px; margin-right: 30px;">
-                        <div class="row">
-                            <div class="col s3">
-
-                            </div>
-                            <div class="col s9">
-                                <h5>John Martin</h5>
-                                <i>Full Stack Developer</i>
-                                <p class="star"><span>★</span> <span>★</span> <span>★</span> <span>★</span> <span>★</span></p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu tellus ultrices, mattis ipsum in, pretium eros.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide waves-effect swiper-slide-next" style="width: 540px; margin-right: 30px;">
-                        <div class="row">
-                            <div class="col s3">
-                                <!--<img src="images/photo.jpg" alt="" class="circle responsive-img">-->
-                            </div>
-                            <div class="col s9">
-                                <h5>John Martin</h5>
-                                <i>Full Stack Developer</i>
-                                <p class="star"><span>★</span> <span>★</span> <span>★</span> <span>★</span> <span>★</span></p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu tellus ultrices, mattis ipsum in, pretium eros.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide waves-effect" style="width: 540px; margin-right: 30px;">
-                        <div class="row">
-                            <div class="col s3">
-                                    <!--<img src="images/photo.jpg" alt="" class="circle responsive-img">-->
-                            </div>
-                            <div class="col s9">
-                                <h5>John Martin</h5>
-                                <i>Full Stack Developer</i>
-                                <p class="star"><span>★</span> <span>★</span> <span>★</span> <span>★</span> <span>★</span></p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu tellus ultrices, mattis ipsum in, pretium eros.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide waves-effect" style="width: 540px; margin-right: 30px;">
-                        <div class="row">
-                            <div class="col s3">
-                                <!--<img src="images/photo.jpg" alt="" class="circle responsive-img">-->
-                            </div>
-                            <div class="col s9">
-                                <h5>John Martin</h5>
-                                <i>Full Stack Developer</i>
-                                <p class="star"><span>★</span> <span>★</span> <span>★</span> <span>★</span> <span>★</span></p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu tellus ultrices, mattis ipsum in, pretium eros.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
-            </div>
-        </div>
     </div>
     <!--Work Expreince-->
     <!--Education-->
-    <div class="education" id="Education">
+    <div class="education" id="Education" scroll-trigger="scrollEventCallback('Education')" threshold="50>
         <h3>Education</h3>
         <div class="card-panel">
             <div class="btn bg-color">1900 - 2000</div>
@@ -204,6 +144,7 @@
     </div>
     <!--Education End-->
     <!--Interest-->
+    <div class="interest" id="Interest" scroll-trigger="scrollEventCallback('Interest')" threshold="50">
     <h3>My Interest</h3>
     <div class="card-panel padding-re">
         <div class="row">
@@ -227,125 +168,10 @@
             </div>
         </div>
     </div>
+        </div>
     <!--Interest End-->
-    <!--Portfolio-->
-    <div class="portfolio" id="portfolio">
-        <h3>Portfolio</h3>
-        <div class="card-panel">
-            <!--Portfolio Menu-->
-            <ul class="tabs">
-                <li class="tab"><a class="waves-effect waves-color active">ALL</a></li>
-                <li class="tab"><a class="waves-effect waves-color">PHOTOSHOP</a></li>
-                <li class="tab"><a class="waves-effect waves-color">HTML&amp;CSS</a></li>
-                <li class="tab"><a class="waves-effect waves-color">PHP</a></li>
-                <div class="indicator" style="right: 802.5px; left: 0px;"></div><div class="indicator" style="right: 802.5px; left: 0px;"></div><div class="indicator" style="right: 802.5px; left: 0px;"></div></ul>
-            <!--Portfolio Menu End-->
-            <!--Portfolio Content-->
-            <div class="portfolio-container">
-                <div class="portfolio-content" style="">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <!--<div class="material-placeholder"><img alt="" src="images/portfolio-4.jpg" class="materialboxed initialized"></div>-->
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <!--<div class="material-placeholder"><img alt="" src="images/portfolio-5.jpg" class="materialboxed initialized"></div>-->
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <!--<div class="material-placeholder"><img alt="" src="images/portfolio-1.jpg" class="materialboxed initialized"></div>-->
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <!--<div class="material-placeholder"><img alt="" src="images/portfolio-4.jpg" class="materialboxed initialized"></div>-->
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <!--<div class="material-placeholder"><img alt="" src="images/portfolio-6.jpg" class="materialboxed initialized"></div>-->
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <!--<div class="material-placeholder"><img alt="" src="images/portfolio-5.jpg" class="materialboxed initialized"></div>-->
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-content" style="display: none;">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <!--<div class="material-placeholder"><img alt="" src="images/portfolio-5.jpg" class="materialboxed initialized"></div>-->
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <!--<div class="material-placeholder"><img alt="" src="images/portfolio-6.jpg" class="materialboxed initialized"></div>-->
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-content" style="display: none;">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <!--<div class="material-placeholder"><img alt="" src="images/portfolio-6.jpg" class="materialboxed initialized"></div>-->
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <!--<div class="material-placeholder"><img alt="" src="images/portfolio-1.jpg" class="materialboxed initialized"></div>-->
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-content" style="display: none;">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <!--<div class="material-placeholder"><img alt="" src="images/portfolio-6.jpg" class="materialboxed initialized"></div>-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Portfolio Content End-->
-        </div>
-    </div>
-    <!--Portfolio End-->
-    <!--Pricing-->
-    <div class="pricing" id="pricing">
-        <h3>Pricing</h3>
-        <div class="row">
-            <div class="col-md-4 col-sm-12 col-xs-12 card-panel">
-                <div class="pricing-head">
-                    <p>Basic</p>
-                    <h2>$100</h2>
-                </div>
-                <div class="pricing-body">
-                    <p>Web Site Design</p>
-                    <p>Wordpress</p>
-                    <p>Logo Design</p>
-                    <p>Online Support</p>
-                    <div class="btn btn-large white black-text waves-effect">BUY NOW</div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-12 col-xs-12 card-panel">
-                <div class="pricing-head bg-color white-text">
-                    <p class="white-text">Standart</p>
-                    <h2>$200</h2>
-                </div>
-                <div class="pricing-body">
-                    <p>Web Site Design</p>
-                    <p>Logo Design</p>
-                    <p>Wordpress</p>
-
-                    <p>Online Support</p>
-                    <div class="btn btn-large bg-color waves-effect">BUY NOW</div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-12 col-xs-12 card-panel">
-                <div class="pricing-head">
-                    <p>Professionals</p>
-                    <h2>$300</h2>
-                </div>
-                <div class="pricing-body">
-                    <p>Logo Design</p>
-                    <p>Web Site Design</p>
-                    <p>Wordpress</p>
-
-                    <p>Online Support</p>
-                    <div class="btn btn-large white black-text waves-effect">BUY NOW</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--Pricing End-->
     <!-- Contact -->
-    <div class="contact" id="Contact">
+    <div class="contact" id="Contact" scroll-trigger="scrollEventCallback('Contact')" threshold="50">
         <h3>Contact</h3>
         <div class="card-panel row">
             <!--Google Map-->

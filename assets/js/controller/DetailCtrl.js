@@ -11,15 +11,14 @@
     DetailsCtrl.$inject = ['$scope', 'Posts' , '$stateParams', '$log'];
 
     function DetailsCtrl( $scope, Posts, $stateParams, $log) {
-        console.log($stateParams.id);
         $scope.page_title = 'Blog Listing';
 
         Posts.get({ID: $stateParams.id}).$promise.then(function (resolve) {
             $scope.post = resolve;
-            $log.info(resolve);
+
 
         }, function (reject) {
-            console.log(reject);
+            $log.error(reject);
 
         })
 

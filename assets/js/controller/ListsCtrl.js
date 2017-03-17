@@ -18,9 +18,8 @@
 
             Posts.query().$promise.then(function (resolve) {
                 $scope.posts = resolve;
-                $log.info(resolve);
             }, function (reject) {
-                console.log(reject);
+                $log.error(reject);
 
             })
 

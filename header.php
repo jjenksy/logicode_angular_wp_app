@@ -13,43 +13,53 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />	
 </head>
 <body <?php body_class(); ?>>
-<!--<md-toolbar md-scroll-shrink>-->
-<!--    <div class="md-toolbar-tools">-->
-<!--        <h3>-->
-<!--            <span><a href="--><?php //bloginfo('wpurl'); ?><!--">-->
-<!--						--><?php //echo bloginfo('name'); ?>
-<!--					</a>-->
-<!--            </span>-->
-<!--        </h3>-->
-<!--    </div>-->
-<!--</md-toolbar>-->
+
 <div layout="row" layout-fill ng-cloak="">
-            <md-sidenav class="md-sidenav-left" md-component-id="left"
+    <div ng-controller="NavMenuCtrl">
+            <md-sidenav
+                        class="md-sidenav-left" md-component-id="left"
                         md-disable-backdrop md-whiteframe="4"
                         md-is-locked-open="$mdMedia('gt-md')">
 
-                <md-toolbar class="md-theme-indigo">
-                    <h1 class="md-toolbar-tools"><span><a href="<?php bloginfo('wpurl'); ?>">
-						<?php echo bloginfo('name'); ?>
-					</a>
-            </span></h1>
+                <md-toolbar class="md-theme-indigo" layout-align="start center">
+                    <div layout-margin layout="column" layout-align="start center">
+                        <img  class="headShot" src="https://media.licdn.com/media/AAEAAQAAAAAAAA1KAAAAJDBhYWEyNmI2LTViYWItNGU3ZS1hNzZlLTY5YjhmNTAyMzAxZA.jpg">
+                        <md-button href="<?php bloginfo('wpurl'); ?>">John Jenkins</md-button>
+                        <p>Full Stack Developer</p>
+                    </div>
                 </md-toolbar>
-
-                <md-content layout-margin layout="column" layout-align="start center">
-                    <img  class="headShot" src="https://media.licdn.com/media/AAEAAQAAAAAAAA1KAAAAJDBhYWEyNmI2LTViYWItNGU3ZS1hNzZlLTY5YjhmNTAyMzAxZA.jpg">
-                    <p>
-                        This sidenav is not showing any backdrop, where users can click on it, to close the sidenav.
-                    </p>
-                    <md-button ng-click="toggleLeft()" class="md-accent">
-                        Close this Sidenav
-                    </md-button>
+                <md-content layout-margin layout="column">
+                    <md-button ng-click="gotoAnchor('About')">About Me</md-button>
+                    <md-button ng-click="gotoAnchor('Skills')">Work Skills</md-button>
+                    <md-button ng-click="gotoAnchor('Experience')">Work Experience</md-button>
+                    <md-button ng-click="gotoAnchor('Education')">Education</md-button>
+                    <md-button ng-click="gotoAnchor('Contact')">Contact</md-button>
+                    <md-button ui-sref="list">Blog</md-button>
                 </md-content>
 
             </md-sidenav>
+    </div>
 
-            <md-content flex layout-padding>
+    <md-content flex layout-fill>
+        <md-toolbar >
+            <div class="md-toolbar-tools">
+                <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+                    <!--                <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>-->
+                </md-button>
 
-                <div layout="column" layout-align="top center">
+                <h2 flex md-truncate><?php echo bloginfo('name'); ?></h2>
+
+                <md-button class="md-icon-button" aria-label="Favorite">
+                    <!--                <md-icon md-svg-icon="img/icons/favorite.svg" style="color: greenyellow;"></md-icon>-->
+                </md-button>
+
+                <md-button class="md-icon-button" aria-label="More">
+                    <!--                <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>-->
+                </md-button>
+            </div>
+        </md-toolbar>
+
+                <div layout="column" layout-align="top center" flex layout-padding>
 
 
 

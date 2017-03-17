@@ -8,7 +8,6 @@ class wp_ng_theme {
 		wp_enqueue_script( 'angular-core', get_template_directory_uri() . '/bower_components/angular/angular.min.js', array( 'jquery' ), '1.0', false );
 		wp_enqueue_script( 'angular-resource', get_template_directory_uri() . '/bower_components/angular-resource/angular-resource.min.js', array('angular-core'), '1.0', false );
 		wp_enqueue_script( 'ui-router', get_template_directory_uri() . '/bower_components/angular-ui-router/release/angular-ui-router.min.js', array( 'angular-core' ), '1.0', false );
-		//todo download and install the directories for bower hookup
 		wp_enqueue_script( 'angular-animate', get_template_directory_uri() . '/bower_components/angular-animate/angular-animate.min.js', array( 'angular-core' ), '1.0', false );
 		wp_enqueue_script( 'angular-aria',  get_template_directory_uri() . '/bower_components/angular-aria/angular-aria.min.js', array( 'angular-core' ), '1.0', false );
 
@@ -17,6 +16,8 @@ class wp_ng_theme {
 		wp_enqueue_script( 'ngScripts', get_template_directory_uri() . '/assets/js/angular-theme.js', array( 'ui-router' ), '1.0', false );
 		wp_enqueue_script( 'detailsCtrl', get_template_directory_uri() . '/assets/js/controller/DetailCtrl.js', array('ngScripts'), '1.0', false );
 		wp_enqueue_script( 'listCtrl', get_template_directory_uri() . '/assets/js/controller/ListsCtrl.js', array('ngScripts'), '1.0', false );
+		wp_enqueue_script( 'homePageCtlr', get_template_directory_uri() . '/assets/js/controller/HomePageCtlr.js', array('ngScripts'), '1.0', false );
+		wp_enqueue_script( 'navMenuCtrl', get_template_directory_uri() . '/assets/js/controller/NavMenuCtrl.js', array('ngScripts'), '1.0', false );
 		wp_localize_script( 'ngScripts', 'appInfo',
 			array(
 				

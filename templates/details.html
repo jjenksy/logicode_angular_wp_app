@@ -1,2 +1,9 @@
 <h1>{{post.title.rendered}}</h1>
 <div ng-bind-html="post.content.rendered | to_trusted"></div>
+
+<div ng-if="post.acf">
+    <div ng-if="post.acf.info_box_title"> {{post.acf.info_box_title}}</div>
+    <div ng-if="post.acf.info_box_content" ng-bind-html="post.acf.info_box_content | to_trusted"></div>
+    <img  ng-if="post.acf.feature_image.url" ng-src="{{post.acf.feature_image.url}}">
+</div>
+<pre><code>{{post | json}}</code></pre>
