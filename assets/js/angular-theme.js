@@ -62,7 +62,6 @@ wpApp.factory( 'Posts', function( $resource ) {
      * The scrolling to directive for angular
      * The function scrollEventCallback() gets called, if it is 100 pixel or less below the currently visible area of the document. Please note,
      * that I used jQuery in this example, so for this to work you will have to include it as well. I hope this is what you asked for.
-     * todo fix the implementation of this
      */
     wpApp.directive('jjScrollTrigger', function($window) {
         return {
@@ -77,14 +76,12 @@ wpApp.factory( 'Posts', function( $resource ) {
                 //the target element
                 var e = jQuery(element[0]);
                 var doc = jQuery(document);
-                angular.element(document).bind('scroll', function() {
-                    console.log(doc.scrollTop() + $window.innerHeight + offset);
-                    console.log(e.offset().top);
+                angular.element(document.querySelector('#jj-scroll-watch')).on('scroll', function() {
 
-                    if (doc.scrollTop() + $window.innerHeight + offset > e.offset().top) {
-                        //call the scrollTrigger method
-                        scope.$apply(attrs.scrollTrigger);
-                    }
+                        if (doc.scrollTop() + $window.innerHeight + offset > e.offset().top) {
+                            //call the scrollTrigger method
+                            scope.$apply(attrs.jjScrollTrigger);
+                        }
                 });
             }
         };
