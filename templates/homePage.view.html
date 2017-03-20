@@ -1,7 +1,7 @@
 
     <!--About-->
-    <md-content class="md-padding" layout-xs="column" layout="row" id="jj-scroll-watch">
-        <div layout="row" id="About" jj-scroll-trigger="scrollEventCallback('About')" threshold="50>
+    <md-content class="md-padding" layout-xs="column" layout="row">
+        <div layout="row" id="About" jj-scroll-trigger="scrollEventCallback()" threshold="50" targetId="About" targetlistener="HighLightButtons">
             <md-card layout-align="start center" layout="row" layout-md="column" layout-xs="column">
                 <img class="homePageSelfie md-padding" flex="50" src="https://media.licdn.com/media/AAEAAQAAAAAAAA1KAAAAJDBhYWEyNmI2LTViYWItNGU3ZS1hNzZlLTY5YjhmNTAyMzAxZA.jpg">
                 <div layout="column">
@@ -33,7 +33,7 @@
     </md-content>
     <!--About End-->
     <!--Work Skills-->
-    <div class="work-skills" id="Skills" jj-scroll-trigger="scrollEventCallback('Skills')" threshold="50>
+    <div class="work-skills" id="Skills" jj-scroll-trigger="scrollEventCallback()" threshold="50" targetId="Skills">
 
         <h3>Work Skills</h3>
         <div class="card-panel">
@@ -103,7 +103,11 @@
     </div>
     <!--Work Skill End-->
     <!--Work Expereince-->
-    <div class="work-expreince" id="Experience" jj-scroll-trigger="scrollEventCallback('Experience')" threshold="50>
+    <div class="work-expreince"
+         id="Experience"
+         jj-scroll-trigger="scrollEventCallback()"
+         threshold="50"
+         targetId="Experience">
         <h3>Work Expreince</h3>
         <div class="card-panel hoverable work-ex">
             <h4>Web Programming &amp; Design</h4>
@@ -123,7 +127,11 @@
     </div>
     <!--Work Expreince-->
     <!--Education-->
-    <div class="education" id="Education" jj-scroll-trigger="scrollEventCallback('Education')" threshold="50>
+    <div class="education" id="Education"
+         jj-scroll-trigger="scrollEventCallback()"
+         threshold="50"
+         targetId="Education">
+
         <h3>Education</h3>
         <div class="card-panel">
             <div class="btn bg-color">1900 - 2000</div>
@@ -144,7 +152,11 @@
     </div>
     <!--Education End-->
     <!--Interest-->
-    <div class="interest" id="Interest" jj-scroll-trigger="scrollEventCallback('Interest')" threshold="50">
+    <div class="interest" id="Interest"
+         jj-scroll-trigger="scrollEventCallback()"
+         threshold="50"
+         targetId="Interest">
+
     <h3>My Interest</h3>
     <div class="card-panel padding-re">
         <div class="row">
@@ -171,7 +183,10 @@
         </div>
     <!--Interest End-->
     <!-- Contact -->
-    <div class="contact" id="Contact" jj-scroll-trigger="scrollEventCallback('Contact')" threshold="50">
+    <div class="contact" id="Contact"
+         jj-scroll-trigger="scrollEventCallback()"
+         threshold="50"
+         targetId="Contact">
         <h3>Contact</h3>
         <div class="card-panel row">
             <!--Google Map-->

@@ -36,12 +36,21 @@
          */
         $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
             // toState === $state.current
-            $log.info($state.current.name);
             if($state.current.name == 'home'){
                 $scope.isHome = true;
             }else{
                 $scope.isHome = false;
             }
+        });
+
+
+        /**
+         * This method is the listener for the highlight button method
+         * todo implement the highlight of the buttons
+         */
+        $scope.$on('HighLightButtons', function(event, args) {
+            console.log(args);
+
         });
 
     }

@@ -40,7 +40,7 @@
             </md-sidenav>
     </div>
 
-    <md-content flex layout-fill>
+    <md-content flex layout-fill id="jj-scroll-watch">
         <md-toolbar >
             <div class="md-toolbar-tools">
                 <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">

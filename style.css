@@ -42,4 +42,5 @@ header, article, footer, section, nav{
 .homePageSelfie {
 	border-radius: 75px;
 }
+
 /******** ALL FURTHER STYLING SHOULD BE DONE IN THE more-style.less/css FILES *******/

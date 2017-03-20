@@ -35,7 +35,7 @@
          * @param data
          */
         $scope.scrollEventCallback = function (name) {
-            $log.info(name);
+            // $log.info(name);
         }
         
     }

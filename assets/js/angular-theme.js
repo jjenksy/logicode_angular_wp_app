@@ -73,11 +73,17 @@ wpApp.factory( 'Posts', function( $resource ) {
             link : function(scope, element, attrs) {
                 //the offset is the setting for the thresh hold attribute
                 var offset = parseInt(attrs.threshold) || 0;
+                //todo use the targetid to target the nav event
+                console.log(attrs.targetid);
+                console.log(attrs.targetlistener);//todo implement the calling of the target listener
                 //the target element
                 var e = jQuery(element[0]);
-                var doc = jQuery(document);
-                angular.element(document.querySelector('#jj-scroll-watch')).on('scroll', function() {
-
+                var doc = jQuery('#jj-scroll-watch');
+                //watches for the scroll event by id of the content to target
+                angular.element(jQuery('#jj-scroll-watch')).scroll(function() {
+                            //console.log(doc.scrollTop());//Get the current vertical position of the scroll bar for the first element in the set of matched elements
+                            //console.log($window.innerHeight);//height of the window
+                        //todo optimize this to select
                         if (doc.scrollTop() + $window.innerHeight + offset > e.offset().top) {
                             //call the scrollTrigger method
                             scope.$apply(attrs.jjScrollTrigger);
