@@ -63,7 +63,7 @@ wpApp.factory( 'Posts', function( $resource ) {
      * The function scrollEventCallback() gets called, if it is 100 pixel or less below the currently visible area of the document. Please note,
      * that I used jQuery in this example, so for this to work you will have to include it as well. I hope this is what you asked for.
      */
-    wpApp.directive('jjScrollTrigger', function($window) {
+    wpApp.directive('jjScrollTrigger', function($rootScope) {
         return {
             /**
              * @param scope
@@ -73,21 +73,26 @@ wpApp.factory( 'Posts', function( $resource ) {
             link : function(scope, element, attrs) {
                 //the offset is the setting for the thresh hold attribute
                 var offset = parseInt(attrs.threshold) || 0;
-                //todo use the targetid to target the nav event
-                console.log(attrs.targetid);
-                console.log(attrs.targetlistener);//todo implement the calling of the target listener
                 //the target element
-                var e = jQuery(element[0]);
+                var elem = jQuery(element[0]);
                 var doc = jQuery('#jj-scroll-watch');
-                //watches for the scroll event by id of the content to target
-                angular.element(jQuery('#jj-scroll-watch')).scroll(function() {
-                            //console.log(doc.scrollTop());//Get the current vertical position of the scroll bar for the first element in the set of matched elements
-                            //console.log($window.innerHeight);//height of the window
-                        //todo optimize this to select
-                        if (doc.scrollTop() + $window.innerHeight + offset > e.offset().top) {
+                angular.element(doc).on('DOMMouseScroll mousewheel', function (e)  {
+                    if(e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) { //alternative options for wheelData: wheelDeltaX & wheelDeltaY
+                        //scroll down
+                        $rootScope.$broadcast('jj-scrollDirection', true);
+                        if (doc.scrollTop() + offset > elem.offset().top) {
+                            //call the scrollTrigger method
+                            scope.$apply(attrs.jjScrollTrigger);
+
+                        }
+                    } else {
+                        //scroll up
+                        $rootScope.$broadcast('jj-scrollDirection', false);
+                        if (doc.scrollTop() + offset > elem.offset().top) {
                             //call the scrollTrigger method
                             scope.$apply(attrs.jjScrollTrigger);
                         }
+                    }
                 });
             }
         };

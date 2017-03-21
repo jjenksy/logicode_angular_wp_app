@@ -12,7 +12,8 @@
     NavMenuCtrl.$inject = ['$scope', '$log', '$rootScope', '$state'];
 
     function NavMenuCtrl($scope, $log, $rootScope, $state) {
-
+        //scroll down boolean
+        $scope.scrollDown = true;
         $scope.gotoAnchor = function(x) {
             //if we are home just go to the anchor on the home controller
             if($scope.isHome){
@@ -45,11 +46,46 @@
 
 
         /**
+         * This method is the listener for scolling to the direction
+         * args is true if down and false if up
+         */
+        $scope.$on('jj-scrollDirection', function(event, args) {
+            $log.info(args);
+            $scope.scrollDown = args;
+        });
+
+        /**
          * This method is the listener for the highlight button method
          * todo implement the highlight of the buttons
+         * need to implement an order and change method if About is assigned and Skills shows up then about
+         * pops out and Skills replaces it when scrrolling down the reverse happens when scrolling up.
          */
+        const highLightClass = "md-raised md-primary";
+        $scope.aboutClass='';
         $scope.$on('HighLightButtons', function(event, args) {
-            console.log(args);
+
+            if(args.toString() =='About'){
+                $log.info(args.toString());
+                $scope.aboutClass= highLightClass;
+            }if(args.toString() == 'Skills'){
+                $log.info(args.toString());
+                $scope.skillsClass = highLightClass;
+
+            }if(args.toString() == 'Experience'){
+                $log.info(args.toString());
+                $scope.experienceClass = highLightClass;
+
+
+            }if(args.toString() == 'Education'){
+                $log.info(args.toString());
+                $scope.educationClass = highLightClass;
+
+
+            }if(args.toString() == 'Contact'){
+                $log.info(args.toString());
+                $scope.contactClass = highLightClass;
+
+            }
 
         });
 

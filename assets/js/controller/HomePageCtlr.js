@@ -7,9 +7,9 @@
         .module('wpAngularTheme')
         .controller( 'HomePageCtlr',HomePageCtlr);
 
-    HomePageCtlr.$inject = ['$scope', '$log', '$anchorScroll','$location'];
+    HomePageCtlr.$inject = ['$scope', '$log', '$anchorScroll','$location', '$rootScope'];
     
-    function HomePageCtlr($scope, $log, $anchorScroll,$location) {
+    function HomePageCtlr($scope, $log, $anchorScroll,$location,$rootScope) {
         var that = this;
 
         /**
@@ -35,7 +35,8 @@
          * @param data
          */
         $scope.scrollEventCallback = function (name) {
-            // $log.info(name);
+            //broadcast the event to the nav controller in order to highlight the nav
+            $rootScope.$broadcast('HighLightButtons', name);
         }
         
     }

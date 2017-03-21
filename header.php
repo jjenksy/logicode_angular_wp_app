@@ -29,11 +29,11 @@
                     </div>
                 </md-toolbar>
                 <md-content layout-margin layout="column">
-                    <md-button ng-click="gotoAnchor('About')">About Me</md-button>
-                    <md-button ng-click="gotoAnchor('Skills')">Work Skills</md-button>
-                    <md-button ng-click="gotoAnchor('Experience')">Work Experience</md-button>
-                    <md-button ng-click="gotoAnchor('Education')">Education</md-button>
-                    <md-button ng-click="gotoAnchor('Contact')">Contact</md-button>
+                    <md-button ng-class="aboutClass" ng-click="gotoAnchor('About')">About Me</md-button>
+                    <md-button ng-class="skillsClass" ng-click="gotoAnchor('Skills')">Work Skills</md-button>
+                    <md-button ng-class="experienceClass" ng-click="gotoAnchor('Experience')">Work Experience</md-button>
+                    <md-button ng-class="educationClass" ng-click="gotoAnchor('Education')">Education</md-button>
+                    <md-button ng-class="contactClass" ng-click="gotoAnchor('Contact')">Contact</md-button>
                     <md-button ui-sref="list">Blog</md-button>
                 </md-content>
 
