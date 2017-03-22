@@ -54,38 +54,25 @@
             $scope.scrollDown = args;
         });
 
+        //setup initial scope objects for my dom
+        $scope = {
+            About:'',
+            Skills:'',
+            Experience: '',
+            Education: '',
+            Contact: ''
+
+        };
+
         /**
          * This method is the listener for the highlight button method
-         * todo implement the highlight of the buttons
          * need to implement an order and change method if About is assigned and Skills shows up then about
          * pops out and Skills replaces it when scrrolling down the reverse happens when scrolling up.
          */
         const highLightClass = "md-raised md-primary";
-        $scope.aboutClass='';
         $scope.$on('HighLightButtons', function(event, args) {
-
-            if(args.toString() =='About'){
-                $log.info(args.toString());
-                $scope.aboutClass= highLightClass;
-            }if(args.toString() == 'Skills'){
-                $log.info(args.toString());
-                $scope.skillsClass = highLightClass;
-
-            }if(args.toString() == 'Experience'){
-                $log.info(args.toString());
-                $scope.experienceClass = highLightClass;
-
-
-            }if(args.toString() == 'Education'){
-                $log.info(args.toString());
-                $scope.educationClass = highLightClass;
-
-
-            }if(args.toString() == 'Contact'){
-                $log.info(args.toString());
-                $scope.contactClass = highLightClass;
-
-            }
+            //todo itterate through the data and allow selection of one at a time and deselect of all other
+            $scope[args.toString()] = highLightClass;
 
         });
 
