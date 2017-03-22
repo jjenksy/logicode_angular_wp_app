@@ -9,9 +9,9 @@
         .module('wpAngularTheme')
         .controller( 'NavMenuCtrl',NavMenuCtrl);
 
-    NavMenuCtrl.$inject = ['$scope', '$log', '$rootScope', '$state'];
+    NavMenuCtrl.$inject = ['$scope', '$log', '$rootScope', '$state', '$timeout'];
 
-    function NavMenuCtrl($scope, $log, $rootScope, $state) {
+    function NavMenuCtrl($scope, $log, $rootScope, $state, $timeout) {
         //scroll down boolean
         $scope.scrollDown = true;
         $scope.gotoAnchor = function(x) {
@@ -54,15 +54,6 @@
             $scope.scrollDown = args;
         });
 
-        //setup initial scope objects for my dom
-        $scope = {
-            About:'',
-            Skills:'',
-            Experience: '',
-            Education: '',
-            Contact: ''
-
-        };
 
         /**
          * This method is the listener for the highlight button method
@@ -72,7 +63,11 @@
         const highLightClass = "md-raised md-primary";
         $scope.$on('HighLightButtons', function(event, args) {
             //todo itterate through the data and allow selection of one at a time and deselect of all other
-            $scope[args.toString()] = highLightClass;
+
+            $timeout(applyClass, 500);//adding a $timeout for debounce purposes
+            function applyClass() {
+                $scope[args.toString()] = highLightClass;
+            }
 
         });
 
