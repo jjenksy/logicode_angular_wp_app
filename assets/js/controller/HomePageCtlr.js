@@ -34,9 +34,10 @@
          * My callback function for the scroll to event directive
          * @param data
          */
-        $scope.scrollEventCallback = function (name) {
+        $scope.scrollEventCallback = function (name, index) {
             //broadcast the event to the nav controller in order to highlight the nav
-            $rootScope.$broadcast('HighLightButtons', name);
+
+            $rootScope.$broadcast('HighLightButtons', {name:name, index:index});
         }
         
     }

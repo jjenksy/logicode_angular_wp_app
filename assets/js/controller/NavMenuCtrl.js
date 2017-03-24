@@ -50,23 +50,49 @@
          * args is true if down and false if up
          */
         $scope.$on('jj-scrollDirection', function(event, args) {
-            $log.info(args);
+
             $scope.scrollDown = args;
         });
 
+        //scope objects for my classes
+        $scope.About = '';
+        $scope.Skills = '';
+        $scope.Experience = '';
+        $scope.Education = '';
+        $scope.Contact = '';
 
         /**
          * This method is the listener for the highlight button method
          * need to implement an order and change method if About is assigned and Skills shows up then about
          * pops out and Skills replaces it when scrrolling down the reverse happens when scrolling up.
          */
+        const domArray = ['About', 'Skills','Experience', 'Education', 'Interest', 'Contact' ];
         const highLightClass = "md-raised md-primary";
+        var currentLevel = -1;
         $scope.$on('HighLightButtons', function(event, args) {
-            //todo itterate through the data and allow selection of one at a time and deselect of all other
+            //todo fix it where nothing gets highlighted if scroll is to fast
 
-            $timeout(applyClass, 500);//adding a $timeout for debounce purposes
-            function applyClass() {
-                $scope[args.toString()] = highLightClass;
+            $timeout(applyAndRemoveClass, 0);//adding a $timeout for debounce purposes
+            function applyAndRemoveClass() {
+                if($scope.scrollDown){
+                    if(currentLevel<args.index){
+                        currentLevel = args.index;
+                        $scope[domArray[currentLevel]] = highLightClass;
+                    }else{
+                        if(currentLevel >0){
+                            $scope[domArray[currentLevel-1]] = '';
+
+                        }
+
+                    }
+
+                }else{
+                    //todo fix the scroll up feature
+                    $scope[domArray[currentLevel]] = '';
+                    currentLevel = -1;
+
+                }
+
             }
 
         });

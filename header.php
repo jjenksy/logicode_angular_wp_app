@@ -31,7 +31,6 @@
                 <md-content layout-margin layout="column">
                     <md-button ng-class="About" ng-click="gotoAnchor('About')">About Me</md-button>
                     <md-button ng-class="Skills" ng-click="gotoAnchor('Skills')">Work Skills</md-button>
-                    <md-button ng-class="Skills" ng-click="gotoAnchor('Skills')">Work Skills</md-button>
                     <md-button ng-class="Experience" ng-click="gotoAnchor('Experience')">Work Experience</md-button>
                     <md-button ng-class="Education" ng-click="gotoAnchor('Education')">Education</md-button>
                     <md-button ng-class="Contact" ng-click="gotoAnchor('Contact')">Contact</md-button>
