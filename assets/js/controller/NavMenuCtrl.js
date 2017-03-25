@@ -9,9 +9,9 @@
         .module('wpAngularTheme')
         .controller( 'NavMenuCtrl',NavMenuCtrl);
 
-    NavMenuCtrl.$inject = ['$scope', '$log', '$rootScope', '$state', '$timeout'];
+    NavMenuCtrl.$inject = ['$scope', '$log', '$rootScope', '$state', '$timeout', '$mdSidenav'];
 
-    function NavMenuCtrl($scope, $log, $rootScope, $state, $timeout) {
+    function NavMenuCtrl($scope, $log, $rootScope, $state, $timeout, $mdSidenav) {
         //scroll down boolean
         $scope.scrollDown = true;
         $scope.gotoAnchor = function(x) {
@@ -96,6 +96,21 @@
             }
 
         });
+
+        /**
+         * Sidenav toggler
+         */
+
+        $scope.toggleLeft = function() {
+            $log.debug("toggle " + 'left' + " is started");
+                // Component lookup should always be available since we are not using `ng-if`
+                $mdSidenav('left')
+                    .toggle()
+                    .then(function () {
+                        $log.debug("toggle " + 'left' + " is done");
+                    });
+        }
+
 
     }
 }());

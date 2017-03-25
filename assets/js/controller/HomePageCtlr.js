@@ -38,7 +38,7 @@
             //broadcast the event to the nav controller in order to highlight the nav
 
             $rootScope.$broadcast('HighLightButtons', {name:name, index:index});
-        }
+        };
         
     }
 }());

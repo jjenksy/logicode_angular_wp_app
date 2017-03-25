@@ -18,7 +18,7 @@
     <div ng-controller="NavMenuCtrl">
             <md-sidenav
                         class="md-sidenav-left" md-component-id="left"
-                        md-disable-backdrop md-whiteframe="4"
+                        md-whiteframe="4"
                         md-is-locked-open="$mdMedia('gt-md')">
 
                 <md-toolbar class="md-theme-indigo" layout-align="start center">
@@ -41,20 +41,15 @@
     </div>
 
     <md-content flex layout-fill id="jj-scroll-watch">
-        <md-toolbar >
+        <md-toolbar ng-controller="NavMenuCtrl">
             <div class="md-toolbar-tools">
-                <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
-                    <!--                <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>-->
-                </md-button>
+
 
                 <h2 flex md-truncate><?php echo bloginfo('name'); ?></h2>
 
-                <md-button class="md-icon-button" aria-label="Favorite">
-                    <!--                <md-icon md-svg-icon="img/icons/favorite.svg" style="color: greenyellow;"></md-icon>-->
-                </md-button>
-
-                <md-button class="md-icon-button" aria-label="More">
-                    <!--                <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>-->
+                <md-button ng-click="toggleLeft()" class="md-icon-button" aria-label="Toggle" hide-gt-md
+                           class="md-accent" >
+                    Toggle left
                 </md-button>
             </div>
         </md-toolbar>
