@@ -4,7 +4,8 @@ var wpApp = new angular.module( 'wpAngularTheme',
         'ngResource',
         'ngAnimate',
         'ngAria',
-        'ngMaterial'
+        'ngMaterial',
+        'chart.js'
     ] );
 
 

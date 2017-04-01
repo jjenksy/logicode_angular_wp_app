@@ -1,24 +1,5 @@
 /*
-Theme Name: AngularJS WP Theme - Lynda.com
-Theme URI: http://www.roysivan.com/angular-wordpress-theme
-Description: Bringing AngularJS technology to WordPress. Theme front end is built using Twitter Bootstrap with some minor styling done by Roy Sivan. This theme is built to help build a Single Page Application using WordPress and AngularJS.
-Version: 5.0
-Tags: WordPress, AngularJS, JavaScript, RESTful, API, Angular, Client Side Application, Single Page Application
-Author: Roy Sivan
-Author URI: http://www.roysivan.com
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
+Theme Name: jjenksy angular theme
 
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -41,6 +22,31 @@ header, article, footer, section, nav{
 
 .homePageSelfie {
 	border-radius: 75px;
+}
+
+
+/*.view-animate {*/
+	/*padding:10px;*/
+/*}*/
+
+.view-animate.ng-enter, .view-animate.ng-leave {
+	transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+	position:absolute;
+	top:auto;
+	left:auto;
+	right:auto;
+	bottom:auto;
+	opacity: 0.7;
+}
+
+.view-animate.ng-enter {
+	right:100%;
+}
+.view-animate.ng-enter.ng-enter-active {
+	right:0;
+}
+.view-animate.ng-leave.ng-leave-active {
+	right:-100%;
 }
 
 /******** ALL FURTHER STYLING SHOULD BE DONE IN THE more-style.less/css FILES *******/

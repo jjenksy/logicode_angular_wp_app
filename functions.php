@@ -11,6 +11,8 @@ class wp_ng_theme {
 		wp_enqueue_script( 'ui-router', get_template_directory_uri() . '/bower_components/angular-ui-router/release/angular-ui-router.min.js', array( 'angular-core' ), '1.0', false );
 		wp_enqueue_script( 'angular-animate', get_template_directory_uri() . '/bower_components/angular-animate/angular-animate.min.js', array( 'angular-core' ), '1.0', false );
 		wp_enqueue_script( 'angular-aria',  get_template_directory_uri() . '/bower_components/angular-aria/angular-aria.min.js', array( 'angular-core' ), '1.0', false );
+		wp_enqueue_script( 'chart.js',  get_template_directory_uri() . '/bower_components/chart.js/dist/chart.js', array(), '1.0', false );
+		wp_enqueue_script( 'angular-chart.js',  get_template_directory_uri() . '/bower_components/angular-chart.js/dist/angular-chart.min.js', array( 'angular-core' ), '1.0', false );
 
     // AngularJS Material Javascript now available via Google CDN; version 1.0.7 used here
 		wp_enqueue_script( 'angular-material',get_template_directory_uri() . '/bower_components/angular-material/angular-material.min.js', array( 'angular-core' ), '1.0', false );
