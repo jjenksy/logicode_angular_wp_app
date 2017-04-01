@@ -19,6 +19,10 @@ class wp_ng_theme {
 		wp_enqueue_script( 'listCtrl', get_template_directory_uri() . '/assets/js/controller/ListsCtrl.js', array('ngScripts'), '1.0', false );
 		wp_enqueue_script( 'homePageCtlr', get_template_directory_uri() . '/assets/js/controller/HomePageCtlr.js', array('ngScripts'), '1.0', false );
 		wp_enqueue_script( 'navMenuCtrl', get_template_directory_uri() . '/assets/js/controller/NavMenuCtrl.js', array('ngScripts'), '1.0', false );
+		wp_enqueue_script( 'aboutCtrl', get_template_directory_uri() . '/assets/js/controller/AboutCtrl.js', array('ngScripts'), '1.0', false );
+		wp_enqueue_script( 'skillCtrl', get_template_directory_uri() . '/assets/js/controller/SkillsCtrl.js', array('ngScripts'), '1.0', false );
+		wp_enqueue_script( 'educationCtrl', get_template_directory_uri() . '/assets/js/controller/EducationCtrl.js', array('ngScripts'), '1.0', false );
+		wp_enqueue_script( 'contactCtrl', get_template_directory_uri() . '/assets/js/controller/ContactCtrl.js', array('ngScripts'), '1.0', false );
 		wp_localize_script( 'ngScripts', 'appInfo',
 			array(
 				

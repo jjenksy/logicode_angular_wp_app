@@ -10,7 +10,12 @@
   	<link rel="apple-touch-icon" href="/favicon.png">
 <!--   wp_head function is used to inject the scripts that were specified in the foote-->
    	<?php wp_head();?>
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />	
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+    <script type="text/javascript">
+        //set a global vairable to the templat urls so I can use it later in
+        //my javascript
+        var templateUrl = '<?= get_bloginfo("template_url"); ?>';
+    </script>
 </head>
 <body <?php body_class(); ?>>
 
@@ -29,11 +34,10 @@
                     </div>
                 </md-toolbar>
                 <md-content layout-margin layout="column">
-                    <md-button ng-class="About" ng-click="gotoAnchor('About')">About Me</md-button>
-                    <md-button ng-class="Skills" ng-click="gotoAnchor('Skills')">Work Skills</md-button>
-                    <md-button ng-class="Experience" ng-click="gotoAnchor('Experience')">Work Experience</md-button>
-                    <md-button ng-class="Education" ng-click="gotoAnchor('Education')">Education</md-button>
-                    <md-button ng-class="Contact" ng-click="gotoAnchor('Contact')">Contact</md-button>
+                    <md-button ui-sref="About">About Me</md-button>
+                    <md-button ui-sref="skills">Skills</md-button>
+                    <md-button ui-sref="education">Education</md-button>
+                    <md-button ui-sref="contact">Contact</md-button>
                     <md-button ui-sref="list">Blog</md-button>
                 </md-content>
 
