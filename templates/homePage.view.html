@@ -1,18 +1,11 @@
 
     <!--About-->
     <md-content class="md-padding" layout-xs="column" layout="row">
-        <div layout="row" id="About" jj-scroll-trigger="scrollEventCallback('About', 0)" threshold="0">
-            <md-card layout-align="start center" layout="row" layout-md="column" layout-xs="column">
-                <!--<img src="../images/LOGICODEBANNER.png" height="360" width="1024"/>-->
-                <!--todo fix the image location to add the banner image-->
-                <img src="<?php echo get_bloginfo('template_url') ?>/images/LOGICODEBANNER.png" height="360" width="1024"/>
-                <div layout="column">
-                    <md-card-title>
-                        <md-card-title-text>
-                            <span class="md-headline">Hello</span>
-                        </md-card-title-text>
-                    </md-card-title>
-                    <md-card-content>
+        <div layout="column" id="About" jj-scroll-trigger="scrollEventCallback('About', 0)" threshold="0">
+            <div flex="50">
+            <img ng-src="{{templateUrl}}" height="360" width="1024"/>
+            </div>
+            <div flex="50">
                         <p>
                         I am a Java, Javascript, and HTML5 Full-Stack developer;
                         </p>
@@ -27,11 +20,7 @@
                             game maker and pixel artist. I am a passionate coder who
                             loves to learn new things.
                         </p>
-
-                    </md-card-content>
-                    </div>
-                </div>
-            </md-card>
+            </div>
     </md-content>
     <!--About End-->
     <!--Work Skills-->
