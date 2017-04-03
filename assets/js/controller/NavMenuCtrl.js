@@ -19,7 +19,6 @@
          */
 
         $scope.toggleLeft = function() {
-            $log.debug("toggle " + 'left' + " is started");
                 // Component lookup should always be available since we are not using `ng-if`
                 $mdSidenav('left')
                     .toggle()
@@ -27,6 +26,13 @@
                         $log.debug("toggle " + 'left' + " is done");
                     });
         }
+
+
+
+
+
+
+
 
 
     }

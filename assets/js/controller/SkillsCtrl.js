@@ -12,12 +12,34 @@
 
     function SkillsCtrl($scope) {
 
-        $scope.labels =["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"];
+        $scope.labels =["Javascript", "CSS", "Angular", "Spring Boot", "Game Dev", "Java", "Software Development","Git"];
 
         $scope.data = [
-            [65, 59, 90, 81, 56, 55, 40],
-            [28, 48, 40, 19, 96, 27, 100]
+            [90, 80, 90, 90, 90, 80, 90, 90]
         ];
+
+        $scope.options ={
+            responsive: true,
+            title: {
+                display: true,
+                text: 'Custom Chart Title'
+            },
+
+            legend: {
+                display: true,
+                labels: {
+                    fontColor: 'rgb(255, 99, 132)'
+                }
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }]
+            }
+
+        }
 
     }
 }());

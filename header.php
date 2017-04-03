@@ -34,11 +34,11 @@
                     </div>
                 </md-toolbar>
                 <md-content layout-margin layout="column">
-                    <md-button ui-sref="About">About Me</md-button>
-                    <md-button ui-sref="skills">Skills</md-button>
-                    <md-button ui-sref="education">Education</md-button>
-                    <md-button ui-sref="contact">Contact</md-button>
-                    <md-button ui-sref="list">Blog</md-button>
+                    <md-button ng-click="toggleLeft()" ui-sref="About">About Me</md-button>
+                    <md-button ng-click="toggleLeft()" ui-sref="skills">Skills</md-button>
+                    <md-button ng-click="toggleLeft()" ui-sref="education">Education</md-button>
+                    <md-button ng-click="toggleLeft()" ui-sref="contact">Contact</md-button>
+                    <md-button ng-click="toggleLeft()" ui-sref="list">Blog</md-button>
                 </md-content>
 
             </md-sidenav>
