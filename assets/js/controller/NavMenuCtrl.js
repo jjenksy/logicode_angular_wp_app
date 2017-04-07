@@ -14,6 +14,7 @@
     function NavMenuCtrl($scope, $log, $rootScope, $state, $timeout, $mdSidenav) {
 
 
+        $scope.headShotImage = templateUrl+"/images/avatar.svg";
         /**
          * Sidenav toggler
          */

@@ -16,6 +16,7 @@
         //set a global vairable to the templat urls so I can use it later in
         //my javascript
         var templateUrl = '<?= get_bloginfo("template_url"); ?>';
+
     </script>
 </head>
 <body <?php body_class(); ?>>
@@ -29,7 +30,7 @@
 
                 <md-toolbar class="md-theme-indigo" layout-align="start center">
                     <div layout-margin layout="column" layout-align="start center">
-                        <img  class="headShot" src="https://media.licdn.com/media/AAEAAQAAAAAAAA1KAAAAJDBhYWEyNmI2LTViYWItNGU3ZS1hNzZlLTY5YjhmNTAyMzAxZA.jpg">
+                        <img class="headShot" ng-src="{{headShotImage}}"/>
                         <md-button href="<?php bloginfo('wpurl'); ?>">John Jenkins</md-button>
                         <p>Full Stack Developer</p>
                     </div>

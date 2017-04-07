@@ -11,8 +11,7 @@
     
     function AboutCtrl($scope) {
 
-        console.log(templateUrl);
-        $scope.templateUrl = templateUrl+"/images/LOGICODEBANNER.png";
+        $scope.banner = templateUrl+"/images/LOGICODEBANNER.png";
         
     }
 }());
