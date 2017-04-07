@@ -1,24 +1,50 @@
 
 
 <!--Education-->
-<div>
+<canvas id='application'></canvas>
+<script>
+    // create a PlayCanvas application
+    var canvas = document.getElementById('application');
+    var app = new pc.Application(canvas, { });
+    app.start();
 
-    <h3>Education</h3>
-    <div class="card-panel">
-        <div class="btn bg-color">1900 - 2000</div>
-        <h4>Istanbul University</h4>
-        <p class="text-color">Web Design Programming and English</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet nisi vestibulum sem luctus ullamcorper sollicitudin quis ligula. Ut euismod pharetra purus, ut vehicula tellus laoreet sit amet.</p>
+    // fill the available space at full resolution
+    app.setCanvasFillMode(pc.FILLMODE_FILL_WINDOW);
+    app.setCanvasResolution(pc.RESOLUTION_AUTO);
 
-        <div class="btn bg-color">1900 - 2000</div>
-        <h4>Istanbul University</h4>
-        <p class="text-color">Web Design Programming and English</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet nisi vestibulum sem luctus ullamcorper sollicitudin quis ligula. Ut euismod pharetra purus, ut vehicula tellus laoreet sit amet..</p>
+    // ensure canvas is resized when window changes size
+    window.addEventListener('resize', function() {
+        app.resizeCanvas();
+    });
 
-        <div class="btn bg-color">1900 - 2000</div>
-        <h4>Istanbul University</h4>
-        <p class="text-color">Web Design Programming and English</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet nisi vestibulum sem luctus ullamcorper sollicitudin quis ligula. Ut euismod pharetra purus, ut vehicula tellus laoreet sit amet.</p>
-    </div>
-</div>
+    // create box entity
+    var cube = new pc.Entity('cube');
+    cube.addComponent('model', {
+        type: 'box'
+    });
+
+    // create camera entity
+    var camera = new pc.Entity('camera');
+    camera.addComponent('camera', {
+        clearColor: new pc.Color(0.1, 0.1, 0.1)
+    });
+
+    // create directional light entity
+    var light = new pc.Entity('light');
+    light.addComponent('light');
+
+    // add to hierarchy
+    app.root.addChild(cube);
+    app.root.addChild(camera);
+    app.root.addChild(light);
+
+    // set up initial positions and orientations
+    camera.setPosition(0, 0, 3);
+    light.setEulerAngles(45, 0, 0);
+
+    // register a global update event
+    app.on('update', function (deltaTime) {
+        cube.rotate(10 * deltaTime, 20 * deltaTime, 30 * deltaTime);
+    });
+</script>
 <!--Education End-->
